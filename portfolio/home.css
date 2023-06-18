@@ -1,0 +1,44 @@
+
+.divider{
+    display: flex;
+}
+
+.left{
+    flex: 1;
+    text-align: center;
+    border: 2px solid goldenrod;
+}
+.left img{
+    border-radius: 50%;
+}
+.right{
+    flex: 1;
+    text-align: center;
+    border: 2px solid goldenrod;
+    color: black;
+}
+
+.navbar{
+    background-color: goldenrod;
+    color: black;
+    margin-bottom: 10%;
+    height: 7vh;
+}
+
+.navbar a{
+   
+    color: black;
+    font-size: 17px;
+    text-align: center;
+    padding: 14px 16px;
+    border: 2px solid black;
+    background-image: url('backg.png');
+}
+
+.navbar a:hover {
+    background-color: green;
+    color: rgb(248, 153, 0);
+  }
+  table, th, td {
+    border: 1px solid gold;
+  }
