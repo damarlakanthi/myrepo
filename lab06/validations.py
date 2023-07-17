@@ -5,8 +5,8 @@ app = Flask(__name__)
 client = MongoClient('mongodb://localhost:27017/')
 db = client['pwdchecker']
 collection = db['pwdcollection']
-global count
-count =0
+# global count
+# count =0
 
 
 @app.route("/")
@@ -18,12 +18,12 @@ def password():
     return render_template("index.html")
 
 
-def counterCall():
+# def counterCall():
     
-    count=count+1
-    print(count)
-    if count >= 3:
-        return render_template('report.html',counter='You have entered 3 times a wrong password')
+#     count=count+1
+#     print(count)
+#     if count >= 3:
+#         return render_template('report.html',counter='You have entered 3 times a wrong password')
 
 @app.route("/validations", methods = ['POST'] )
 def validations():
@@ -55,22 +55,22 @@ def validations():
             return render_template('report.html',success='your password passed all three requirements....!!!!')
             
         if(lc==1 and uc==1 and num==1 and char!=1):
-            counterCall()
+            
             return render_template('report.html',charerror='There should be one upper case....')
         if(lc==1 and uc==1 and num!=1 and char!=1):
-            counterCall()
+            
             return render_template('report.html',charerror='There should be one upper case....',numerror='Password should end with a number....!!!')
         if(lc!=1 and uc!=1 and num==1 and char==1):
-            counterCall()
+            
             return render_template('report.html',lowerror='There should have atleast  one lower case....',uperror='Password should have atleast one Uppercase....!!!')
         if(uc!=1):
-            counterCall()
+            
             return render_template('report.html',uperror='There should be one upper case....')
         if(num!=1):
-            counterCall()
+            
             return render_template('report.html',lowerror='There should be one number....')
         if(char!=1):
-            counterCall()
+            
             return render_template('report.html',charerror='length should be 8 characters....')
         
         return render_template('report.html',success='your password passed all three requirements....!!!!')
