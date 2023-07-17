@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password checker</title>
+    <link  href="styles.css" />
+    <style>
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #6e7bdd;
+}
+        li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #a7cfd2;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/password">Password Checker</a></li>
+          </ul>
+    </nav>
+    <br>
+    <h1>Welcome to the password checker </h1>
+    <p>Lets see if your password matches the requirements....</p>
+    <h3>Fill out the below form with Username and Passowrd that has these requirements</h3>
+    
+    <i>It must contain a lowercase letter</i><br>
+    <i>It must contain an uppercase letter</i><br>
+    <i>It must end in a number</i><br>
+    <i>password should be at least 8 characters</i><br><br>
+    
+    
+    <form action="/validations" method = "post">
+       <fieldset>
+        <legend>User Details</legend>
+        <input type="text" placeholder="Enter username" id="username" name="username"/><br>
+        <input type="password" placeholder="Password" id="password" name="password"/><br>
+        <input type="submit" />
+        </fieldset>
+     </form>
+     
+</body>
+</html>
