@@ -31,7 +31,7 @@ def submitsignup():
         return render_template('signup.html',error='email is already exists...')
     collection.insert_one({'firstName': first,'lastName':last,'email': email, 'password': password})
 
-    return render_template('login.html')
+    return render_template('thankyou.html')
 
 @app.route("/loginsubmission", methods=['POST'])
 def loginsubmission():
